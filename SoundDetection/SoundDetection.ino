@@ -8,14 +8,21 @@
  *  representar graficamente lo valores de entrada
  */
 
-
+// Declaración de variables 
+const int ANALOG_PIN = 0; 
+int inputValue;
+ 
 void setup() {
   //  Algoritmo inicial de configuración general del proyecto 
-
+  Serial.begin(9600); // Puerto serial 9600 Baudios  
 }
 
 
 void loop() {
   // Algoritmo de repetición general
-
+  inputValue = analogRead(ANALOG_PIN);
+  exportValue = map(inputValue, 0, 255, 0, 100); // Proporcion de Valores con funcion Map   
+  Serial.write(exportValue); 
 }
+
+
