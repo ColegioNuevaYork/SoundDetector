@@ -5,10 +5,16 @@
 * por comunicación serial enviados por arduino 
 */ 
 
+
+// Declaración de variables
+
+
 void setup() {
   size(700,500); 
+  noStroke(); // Eliminar bordes 
 }
 
 void draw() {
-  background(0); 
+  background(0);
+  ellipse(); // Creación de objeto tipo ellipse 
 }
